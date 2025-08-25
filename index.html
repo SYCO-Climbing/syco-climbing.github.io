@@ -238,13 +238,17 @@
 		<div class="contact__inner">
 			<h2 class="contact__title">Contact us</h2>
 			<p class="contact__descr">Send us ideas, or sign up to our email list to stay updated!</p>
-			<form class="contact__form" action="..contact.php" method="post">
-				<input class="contact__form-input" id="name" type="text" name="fname" placeholder="John">
-				<input class="contact__form-input" id="name" type="text" name="lname" placeholder="Doe">
-				<input class="contact__form-input" id="email" type="email" name="email" placeholder="john.doe@email.com"> 
-				<textarea class="contact__form-tarea" id="message" name="message" placeholder="Your message"></textarea> 
+			<form class="contact__form" name="gform" action="https://docs.google.com/forms/d/e/1FAIpQLScnWH8fbzgb5H4TC7E04o6PHg9oS-6nQAbcYPHIieo06eK0EA/formResponse?" target="hidden_iframe" onsubmit="submitted=true;">
+				<input class="contact__form-input" id="entry.1268062797" type="text" name="entry.1268062797" placeholder="John">
+				<input class="contact__form-input" id="entry.2105448213" type="text" name="entry.2105448213" placeholder="Doe">
+				<input class="contact__form-input" id="entry.1084191424" type="email" name="entry.1084191424" placeholder="john.doe@email.com"> 
+				<textarea class="contact__form-tarea" id="entry.1808387583" name="entry.1808387583" placeholder="Your message"></textarea> 
 				<input class="contact__form-submit" type="submit" name="formSubmit" value="Submit">
 			</form>
+
+			<iframe name="hidden_iframe" id="hidden_iframe" style="display:none;" onload="if(submitted) {}"></iframe>
+
+			
 			<div class="contact__card vcard">
 				<h3 class="contact__card-title">Information</h3>
 				<div class="contact__card-item place">
@@ -272,8 +276,16 @@
 	</footer>
 
 	<script src="../build/static/js/body.min.js"></script>
+	<script type="text/javascript">var submitted=false;</script>
+	<script type="text/javascript">
+		$('#gform').on('submit', function(e) {
+			$('#gform *').fadeOut(2000);
+			$('#gform').prepend('Your submission has been processed...');
+		});
+	</script>
 
 </body>
 
 
 </html>
+
