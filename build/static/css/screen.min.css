@@ -59,6 +59,9 @@ body{background-color:#fff;font-family:"Lato",sans-serif;color:#424242}
 	font-size:14px;line-height:24px;color:#d25019}
 .contact__card-item.insta span{font-size:21px;}
 .contact__card-item.insta:before{content:"\f16d"}
+.contact__card-item.formthank{display:inline-block;padding-left:20px;
+	font-size:21px;line-height:24px;color:#d25019}
+.contact__card-item.formthank:before{content:"\f14a"}
 .contact__card-item.email{display:inline-block;padding-left:20px;
 	font-size:14px;line-height:24px;color:#464646; margin-bottom:10px}
 .contact__card-item.email:before{content:"\f003"}
@@ -333,5 +336,6 @@ body{background-color:#fff;font-family:"Lato",sans-serif;color:#424242}
 	.portfolio__filter li{display:block}
 
 }
+
 
 
