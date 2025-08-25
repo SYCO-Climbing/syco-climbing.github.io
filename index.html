@@ -238,17 +238,16 @@
 		<div class="contact__inner">
 			<h2 class="contact__title">Contact us</h2>
 			<p class="contact__descr">Send us ideas, or sign up to our email list to stay updated!</p>
-			<form class="contact__form" name="gform" action="https://docs.google.com/forms/d/e/1FAIpQLScnWH8fbzgb5H4TC7E04o6PHg9oS-6nQAbcYPHIieo06eK0EA/formResponse?" target="hidden_iframe" onsubmit="submitted=true;">
+			<form class="contact__form" name="gform" id="form" action="https://docs.google.com/forms/d/e/1FAIpQLScnWH8fbzgb5H4TC7E04o6PHg9oS-6nQAbcYPHIieo06eK0EA/formResponse?" target="hidden_iframe" onsubmit="submitted=true;">
 				<input class="contact__form-input" id="entry.1268062797" type="text" name="entry.1268062797" placeholder="John">
 				<input class="contact__form-input" id="entry.2105448213" type="text" name="entry.2105448213" placeholder="Doe">
 				<input class="contact__form-input" id="entry.1084191424" type="email" name="entry.1084191424" placeholder="john.doe@email.com"> 
 				<textarea class="contact__form-tarea" id="entry.1808387583" name="entry.1808387583" placeholder="Your message"></textarea> 
 				<input class="contact__form-submit" type="submit" name="formSubmit" value="Submit">
 			</form>
+			<iframe name="hidden_iframe" id="hidden_iframe" style="display:none;" ></iframe>
 
-			<iframe name="hidden_iframe" id="hidden_iframe" style="display:none;" onload="if(submitted) {}"></iframe>
 
-			
 			<div class="contact__card vcard">
 				<h3 class="contact__card-title">Information</h3>
 				<div class="contact__card-item place">
@@ -262,6 +261,8 @@
 				<div class="contact__card-item tel">+914<span class="type"><!--&nbsp;(Phone)-->&nbsp;</span>359-6996</div>
 				<a class="contact__card-item email" href="#">info@SYCOclimbing.org</a>
 				<a class="contact__card-item insta" href="https://www.instagram.com/sycoclimbing"><span>Instagram</span><br>follow for updates and events</br></a>
+				<br><br><br>
+				<p class="contact__card-item formthank" id="log"></p>
 
 			</div>
 		</div>
@@ -276,19 +277,19 @@
 	</footer>
 
 	<script src="../build/static/js/body.min.js"></script>
-	<script type="text/javascript">var submitted=false;</script>
-	<script type="text/javascript">
-		$('#gform').on('submit', function(e) {
-			$('#gform *').fadeOut(2000);
-			$('#gform').prepend('Your submission has been processed...');
-		});
-	</script>
+    <script src="https://assets.calendly.com/assets/external/widget.js" type="text/javascript" async></script>
+    <script>
+    	function logSubmit(event) {
+			log.textContent = `Thank you for your interest!`;
+			event.preventDefault();
+		}
+
+		const form = document.getElementById("form");
+		const log = document.getElementById("log");
+		form.addEventListener("submit", logSubmit);
+    </script>
+
 
 </body>
 
-
 </html>
-
-
-
-
