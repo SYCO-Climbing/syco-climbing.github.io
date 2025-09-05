@@ -74,7 +74,7 @@ body{background-color:#fff;font-family:"Lato",sans-serif;color:#424242}
 .page-header__inner{max-width:1024px;margin:0 auto}
 .page-header__inner:after{content:'';display:table;clear:both}
 .page-header__logo{float:left;height:50px;margin:25px 0 0 40px;
-	padding:5px 0 0 65px;background:url(../images/logo2.png) 0 center no-repeat}
+	padding:5px 0 0 65px;background:url(../images/CircleLogo.svg) 0 center no-repeat}
 .page-header__logo h1{font-size:20px;font-weight:700;text-transform:uppercase}
 .page-header__logo span{font-size:14px;text-transform:capitalize}
 .page-header__nav{float:right;margin:30px 55px 0 0;background-color:#fff}
@@ -336,6 +336,7 @@ body{background-color:#fff;font-family:"Lato",sans-serif;color:#424242}
 	.portfolio__filter li{display:block}
 
 }
+
 
 
 
