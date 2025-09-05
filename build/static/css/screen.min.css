@@ -227,7 +227,7 @@ body{background-color:#fff;font-family:"Lato",sans-serif;color:#424242}
 
 
 .promo{width:100%;min-height:455px;padding:70px 0;
-	background:#fff url(../images/SquareLogo.svg) center 0 no-repeat;
+	background:#fff url(../images/SYCObig.PNG) center 0 no-repeat;
 	background-blend-mode:overlay;
 	background-attachment:fixed;-webkit-background-size:contain;
 	background-size:contain;text-align:center;color:#fff}
@@ -336,6 +336,7 @@ body{background-color:#fff;font-family:"Lato",sans-serif;color:#424242}
 	.portfolio__filter li{display:block}
 
 }
+
 
 
 
