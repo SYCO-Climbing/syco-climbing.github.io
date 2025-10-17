@@ -179,8 +179,43 @@ li.portfolio__item div.portfolio__item-caption span {
 	color: #F48030 !important;
 }
 
+/* Form width adjustment for mobile */
+@media (max-width: 768px) {
+	.contact__form {
+		width: 90% !important;
+		max-width: 90% !important;
+		margin: 0 auto !important;
+		padding: 0 5% !important;
+		box-sizing: border-box !important;
+	}
+	
+	.contact__form-input,
+	.contact__form-tarea {
+		width: 100% !important;
+		max-width: 100% !important;
+		box-sizing: border-box !important;
+	}
+}
+
 /* Mobile responsive styles */
 @media (max-width: 768px) {
+	/* Hide banner on mobile */
+	.banner {
+		display: none !important;
+	}
+	
+	/* Hide SYCO text and subtitle on mobile */
+	.page-header__logo h1,
+	.page-header__logo span {
+		display: none !important;
+	}
+	
+	/* Make logo 50% bigger on mobile */
+	.page-header__logo {
+		transform: scale(1.50) !important;
+		margin: 0 auto !important;
+	}
+	
 	/* Hamburger menu for mobile */
 	.page-header__nav {
 		display: none !important;
@@ -208,7 +243,7 @@ li.portfolio__item div.portfolio__item-caption span {
 		text-align: center !important;
 		display: block !important;
 		padding: 10px !important;
-		border-bottom: 1px solid #eee !important;
+		border-bottom: none !important;
 	}
 	
 	/* Hamburger button */
@@ -216,28 +251,55 @@ li.portfolio__item div.portfolio__item-caption span {
 		display: block !important;
 		background: none !important;
 		border: none !important;
-		font-size: 24px !important;
+		font-size: 32px !important;
 		cursor: pointer !important;
 		padding: 10px !important;
+		color: #000000 !important;
+		outline: none !important;
+		box-shadow: none !important;
 	}
 	
-	.hamburger:before {
-		content: "☰" !important;
+	.hamburger:focus,
+	.hamburger:active,
+	.hamburger:hover {
+		outline: none !important;
+		box-shadow: none !important;
+		border: none !important;
+		background: none !important;
 	}
 	
-	/* Form width adjustment for mobile */
-	.contact__form {
-		width: 90% !important;
-		max-width: 90% !important;
+	/* Remove any initial focus/selection styling */
+	.hamburger:focus-visible {
+		outline: none !important;
+		box-shadow: none !important;
 	}
 	
-	.contact__form-input,
-	.contact__form-tarea {
-		width: 100% !important;
-		max-width: 100% !important;
+	/* Prevent auto-focus on page load */
+	.hamburger {
+		outline: none !important;
+		box-shadow: none !important;
+		-webkit-tap-highlight-color: transparent !important;
+		-webkit-focus-ring-color: transparent !important;
+		border: none !important;
+		background: transparent !important;
+		-webkit-appearance: none !important;
+		-moz-appearance: none !important;
+		appearance: none !important;
+		-webkit-border-radius: 0 !important;
+		-moz-border-radius: 0 !important;
+		border-radius: 0 !important;
+		-webkit-box-shadow: none !important;
+		-moz-box-shadow: none !important;
+		box-shadow: none !important;
+		-webkit-outline: none !important;
+		-moz-outline: none !important;
+		outline: none !important;
+		-webkit-outline-offset: 0 !important;
+		-moz-outline-offset: 0 !important;
+		outline-offset: 0 !important;
 	}
 	
-	/* Phone number formatting and color fix */
+	/* Phone number color fix - force black */
 	.contact__card-item.tel {
 		color: #000000 !important;
 	}
@@ -245,11 +307,87 @@ li.portfolio__item div.portfolio__item-caption span {
 	.contact__card-item.tel span {
 		color: #000000 !important;
 	}
+	
+	/* Force all contact items to be black on mobile */
+	.contact__card-item {
+		color: #000000 !important;
+	}
+	
+	.contact__card-item a {
+		color: #000000 !important;
+	}
 }
 
 /* Hide hamburger on desktop */
 .hamburger {
 	display: none !important;
+}
+
+/* Force phone number to be black on all devices */
+.contact__card-item.tel,
+.contact__card-item.tel * {
+	color: #000000 !important;
+}
+
+/* Ensure hamburger button is visible on mobile */
+@media (max-width: 768px) {
+	.hamburger {
+		display: block !important;
+		visibility: visible !important;
+		opacity: 1 !important;
+		position: relative !important;
+		z-index: 1001 !important;
+		background: white !important;
+		border: 1px solid #ccc !important;
+		border-radius: 4px !important;
+		margin-left: auto !important;
+		margin-right: -40px !important;
+	}
+	
+	.page-header__inner {
+		justify-content: space-between !important;
+		align-items: center !important;
+		padding-right: 0 !important;
+		margin-right: 0 !important;
+		max-width: 100% !important;
+		margin-left: 0 !important;
+		margin-right: 0 !important;
+		width: 100% !important;
+		padding-left: 0 !important;
+		padding-right: 0 !important;
+	}
+	
+	/* More specific override for header container */
+	.page-header .page-header__inner {
+		max-width: 100% !important;
+		margin: 0 !important;
+		padding: 0 !important;
+		width: 100% !important;
+	}
+	
+	/* Contact information - stack vertically on mobile */
+	.contact__card {
+		flex-direction: column !important;
+		gap: 15px !important;
+		align-items: center !important;
+		justify-content: center !important;
+		text-align: center !important;
+	}
+	
+	.contact__card-item {
+		text-align: center !important;
+		display: inline-block !important;
+		width: auto !important;
+		padding-left: 20px !important;
+		margin: 0 auto !important;
+	}
+	
+	.contact__card-item::before {
+		position: static !important;
+		margin-right: 8px !important;
+		margin-left: 0 !important;
+		transform: none !important;
+	}
 }
 
 /* Center the copyright message horizontally */
@@ -283,7 +421,7 @@ li.portfolio__item div.portfolio__item-caption span {
 	display: flex !important;
 	flex-direction: column !important;
 	align-items: flex-end !important;
-	width: 400px !important;
+	width: 370px !important;
 	max-width: 400px !important;
 	margin: 10px auto 0 !important;
 	text-align: center !important;
