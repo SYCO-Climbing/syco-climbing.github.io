@@ -31,7 +31,8 @@
 			<div class="page-header__logo">
 				<h1>SYCO</h1>&nbsp;<span>Supporting Youth Climbing Opportunities Inc.</span>
 			</div>
-			<nav class="page-header__nav js-nav">
+			<button class="hamburger" onclick="toggleMobileMenu()">☰</button>
+			<nav class="page-header__nav js-nav" id="mobile-nav">
 				<ul>
 					<li>
 						<a class="page-header__nav-link js-anchor js-link" href="#contact">Contact</a>
@@ -90,13 +91,18 @@
 				window.location.href = mailtoLink;
 				return false;
 			}
+			
+			function toggleMobileMenu() {
+				var nav = document.getElementById('mobile-nav');
+				nav.classList.toggle('mobile-open');
+			}
 			</script>
 			
 
 		</div>
 		<div class="contact__card vcard">
 
-			<div class="contact__card-item tel">914<span class="type"><!--&nbsp;(Phone)-->&nbsp;</span>359-6996</div>
+			<div class="contact__card-item tel">914-359-6996</div>
 			<a class="contact__card-item email" href="mailto:info@SYCOclimbing.org">info@SYCOclimbing.org</a>
 			<a class="contact__card-item insta" href="https://www.instagram.com/sycoclimbing"><span>@SYCOclimbing</span></a>
 			<br><br><br>
