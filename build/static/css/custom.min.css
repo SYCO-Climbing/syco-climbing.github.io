@@ -1,0 +1,373 @@
+/* Banner section */
+.banner {
+	width: 100%;
+	text-align: center;
+	background-color: #fff;
+	padding: 20px 0;
+}
+
+.banner__image {
+	max-width: 75%;
+	height: auto;
+	display: block;
+	margin: 0 auto;
+}
+
+/* Remove background image from promo section */
+.promo {
+	background: #474747 !important;
+}
+
+/* Expand SYCO Mission text */
+.promo__descr {
+	max-width: 80% !important;
+}
+
+/* Prevent scroll jump when header becomes fixed */
+.page-header {
+	position: fixed !important;
+	top: 0;
+	left: 0;
+	width: 100%;
+	z-index: 999;
+}
+
+body {
+	padding-top: 95px !important;
+}
+
+/* Make all portfolio items fit on one line */
+.portfolio__item {
+	width: 120px !important;
+	height: 120px !important;
+	margin: 0 10px 15px !important;
+}
+
+.portfolio__content {
+	display: flex !important;
+	justify-content: center !important;
+	align-items: center !important;
+	flex-wrap: nowrap !important;
+	gap: 10px !important;
+	margin: 10px auto 15px !important;
+	width: 100% !important;
+}
+
+.portfolio__inner {
+	display: flex !important;
+	justify-content: center !important;
+	align-items: center !important;
+}
+
+/* Reduce portfolio section vertical space */
+.portfolio {
+	min-height: 250px !important;
+	padding-top: 20px !important;
+	background-color: #2c3e50 !important;
+}
+
+/* Style for portfolio item icons */
+.portfolio__item-icon {
+	width: 100%;
+	height: 100%;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	background: linear-gradient(135deg, #ff9a9e 0%, #fecfef 50%, #fecfef 100%);
+	border-radius: 50%;
+	font-size: 60px;
+	color: #fff;
+}
+
+/* Show text under the button instead of inside */
+.portfolio__item .portfolio__item-caption {
+	position: static !important;
+	visibility: visible !important;
+	opacity: 1 !important;
+	background: none !important;
+	background-color: transparent !important;
+	width: 100% !important;
+	height: auto !important;
+	padding: 10px 0 0 0 !important;
+	border-radius: 0 !important;
+	text-align: center !important;
+	color: #fff !important;
+	display: block !important;
+}
+
+.portfolio__item .portfolio__item-title {
+	display: block !important;
+	font-size: 14px !important;
+	margin-bottom: 5px !important;
+	font-weight: bold !important;
+	color: #fff !important;
+}
+
+.portfolio__item .portfolio__item-cat {
+	display: block !important;
+	font-size: 12px !important;
+	opacity: 0.8 !important;
+	color: #fff !important;
+}
+
+/* Remove any hover effects that hide the text */
+.portfolio__item:hover .portfolio__item-caption {
+	opacity: 1 !important;
+	visibility: visible !important;
+}
+
+/* Force text to be visible with very specific selectors */
+li.portfolio__item div.portfolio__item-caption {
+	display: block !important;
+	visibility: visible !important;
+	opacity: 1 !important;
+	position: static !important;
+	background: transparent !important;
+	color: #fff !important;
+	font-size: 16px !important;
+	padding: 10px !important;
+	text-align: center !important;
+	width: 100% !important;
+	height: auto !important;
+	border: 2px solid red !important; /* Temporary border to see if it shows */
+}
+
+li.portfolio__item div.portfolio__item-caption span {
+	display: block !important;
+	color: #fff !important;
+	font-size: 14px !important;
+	font-weight: bold !important;
+}
+
+/* Center header elements */
+.page-header {
+	display: flex !important;
+	align-items: center !important;
+	min-height: 95px !important;
+}
+
+.page-header__inner {
+	display: flex !important;
+	justify-content: center !important;
+	align-items: center !important;
+	gap: 80px !important;
+	width: 100% !important;
+	height: 100% !important;
+}
+
+.page-header__logo {
+	margin: 0 !important;
+}
+
+.page-header__nav {
+	margin: 0 !important;
+}
+
+.page-header__nav-link {
+	font-weight: bold !important;
+	font-size: 18px !important;
+}
+
+/* Make SYCO in mission title orange */
+.promo__title span {
+	color: #F48030 !important;
+}
+
+/* Make Contact Us title bold and orange */
+.contact__title {
+	font-weight: bold !important;
+	color: #F48030 !important;
+}
+
+/* Center the copyright message horizontally */
+.page-footer {
+	text-align: center !important;
+}
+
+.page-footer__inner {
+	display: flex !important;
+	justify-content: center !important;
+	align-items: center !important;
+	width: 100% !important;
+}
+
+.page-footer__copyright {
+	text-align: center !important;
+	width: auto !important;
+	margin: 35px auto 0 !important;
+	display: block !important;
+}
+
+/* Center the contact form */
+.contact__inner {
+	display: flex !important;
+	flex-direction: column !important;
+	align-items: center !important;
+	width: 100% !important;
+}
+
+.contact__form {
+	display: flex !important;
+	flex-direction: column !important;
+	align-items: flex-end !important;
+	width: 400px !important;
+	max-width: 400px !important;
+	margin: 10px auto 0 !important;
+	text-align: center !important;
+}
+
+.contact__descr {
+	margin-bottom: 10px !important;
+}
+
+.contact__form-input,
+.contact__form-tarea {
+	width: 400px !important;
+	margin: 10px auto !important;
+	display: block !important;
+	text-align: left !important;
+	color: #333333 !important;
+}
+
+.contact__form-input::placeholder,
+.contact__form-tarea::placeholder {
+	color: #999999 !important;
+	opacity: 1 !important;
+}
+
+.contact__form-submit {
+	width: auto !important;
+	margin: 10px 0 !important;
+	align-self: flex-end !important;
+	padding: 12px 24px !important;
+	min-width: 120px !important;
+	display: flex !important;
+	align-items: center !important;
+	justify-content: center !important;
+	line-height: 1 !important;
+	height: auto !important;
+	background-color: #F48030 !important;
+}
+
+.contact__form-tarea {
+	width: 400px !important;
+	height: 120px !important;
+}
+
+/* Center the Information section */
+.contact__card {
+	text-align: center !important;
+	margin: 20px auto 0 !important;
+	width: 100% !important;
+	max-width: 800px !important;
+	display: flex !important;
+	flex-wrap: wrap !important;
+	justify-content: center !important;
+	align-items: center !important;
+	gap: 20px !important;
+}
+
+/* Unified styling for all contact information items */
+.contact__card-item,
+.contact__card-item.place,
+.contact__card-item.tel,
+.contact__card-item.email,
+.contact__card-item.insta {
+	display: inline-block !important;
+	margin: 0 !important;
+	white-space: nowrap !important;
+	font-family: inherit !important;
+	font-size: 16px !important;
+	font-weight: normal !important;
+	color: #000000 !important;
+	text-decoration: none !important;
+	padding-left: 20px !important;
+	position: relative !important;
+}
+
+/* Restore and style icons */
+.contact__card-item:before {
+	display: block !important;
+	position: absolute !important;
+	top: 0 !important;
+	left: 0 !important;
+	font-family: FontAwesome !important;
+	color: #000000 !important;
+}
+
+.contact__card-item.place:before {
+	content: "\f041" !important;
+}
+
+.contact__card-item.tel:before {
+	content: "\f098" !important;
+}
+
+.contact__card-item.email:before {
+	content: "\f003" !important;
+}
+
+.contact__card-item.insta:before {
+	content: "\f16d" !important;
+}
+
+/* Override original colors */
+.contact__card-item.email,
+.contact__card-item.insta {
+	color: #000000 !important;
+}
+
+.contact__card-item.email:hover {
+	text-decoration: none !important;
+}
+
+/* Maximum specificity override for contact items */
+.contact .contact__card .contact__card-item,
+.contact .contact__card .contact__card-item.place,
+.contact .contact__card .contact__card-item.tel,
+.contact .contact__card .contact__card-item.email,
+.contact .contact__card .contact__card-item.insta {
+	color: #000000 !important;
+	font-size: 16px !important;
+	font-weight: normal !important;
+	display: inline-block !important;
+	margin: 0 !important;
+	padding-left: 20px !important;
+	position: relative !important;
+}
+
+/* Force icon display with maximum specificity */
+.contact .contact__card .contact__card-item:before {
+	display: block !important;
+	position: absolute !important;
+	top: 0 !important;
+	left: 0 !important;
+	font-family: FontAwesome !important;
+	color: #000000 !important;
+	font-size: 16px !important;
+}
+
+.contact .contact__card .contact__card-item.place:before {
+	content: "\f041" !important;
+}
+
+.contact .contact__card .contact__card-item.tel:before {
+	content: "\f098" !important;
+}
+
+.contact .contact__card .contact__card-item.email:before {
+	content: "\f003" !important;
+}
+
+.contact .contact__card .contact__card-item.insta:before {
+	content: "\f16d" !important;
+}
+
+/* Specific override for Instagram span */
+.contact .contact__card .contact__card-item.insta span,
+.contact__card-item.insta span {
+	font-size: 16px !important;
+	font-weight: normal !important;
+	color: #000000 !important;
+}
+
