@@ -1,0 +1,148 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="utf-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta name="viewport" content="width=device-width,initial-scale=1">
+
+	<title>SYCO | Team</title>
+
+	<meta name="description" content="Meet the SYCO team.">
+	<meta name="keywords" content="Non-profit Climbing Youth Sports Grassroots Fundraising">
+	<link rel="shortcut icon" href="../build/favicon.ico">
+	<link rel="shortcut icon" href="../build/static/images/favicons/favicon.png" type="image/x-icon">
+	<link rel="apple-touch-icon" href="../build/static/images/favicons/apple-touch-icon.png">
+	<link rel="apple-touch-icon-precomposed" href="../build/static/images/favicons/apple-touch-icon.png">
+	<link href="https://fonts.googleapis.com/css?family=Lato:400,300,700" rel="stylesheet" type="text/css">
+	<link rel="stylesheet" href="//netdna.bootstrapcdn.com/font-awesome/4.0.3/css/font-awesome.css">
+	<link rel="stylesheet" href="../build/static/css/screen.min.css">
+	<link rel="stylesheet" href="../build/static/css/custom.min.css?v=24">
+</head>
+
+<body>
+	<header class="page-header js-header">
+		<div class="page-header__inner">
+			<a class="page-header__logo" href="index.html">
+				<h1>SYCO</h1>&nbsp;<span>Supporting Youth Climbing Opportunities Inc.</span>
+			</a>
+			<button class="hamburger" onclick="toggleMobileMenu()" tabindex="-1">☰</button>
+			<nav class="page-header__nav js-nav" id="mobile-nav">
+				<ul>
+					<li>
+						<a class="page-header__nav-link" href="index.html#contact">Contact</a>
+					</li>
+					<li>
+						<a class="page-header__nav-link" href="https://my.cheddarup.com/c/open-donations-72740/items">Donate</a>
+					</li>
+					<li>
+						<a class="page-header__nav-link is-active" href="team.html">Team</a>
+					</li>
+				</ul>
+			</nav>
+		</div>
+	</header>
+
+	<main class="team-page">
+		<article class="team-card">
+			<img class="team-card__photo" src="../build/static/images/board-nate-pingilley-display.jpg" alt="Nate Pingilley">
+			<div class="team-card__aside">
+				<p class="team-card__name">Nate Pingilley</p>
+				<p class="team-card__role">President</p>
+			</div>
+		</article>
+		<article class="team-card team-card--text">
+			<div class="team-card__aside">
+				<p class="team-card__name">Tyler Gadigian</p>
+				<p class="team-card__role">Vice President</p>
+			</div>
+		</article>
+		<article class="team-card team-card--text">
+			<div class="team-card__aside">
+				<p class="team-card__name">Jessica Bucca-Hughes</p>
+				<p class="team-card__role">Secretary</p>
+			</div>
+		</article>
+		<article class="team-card team-card--text">
+			<div class="team-card__aside">
+				<p class="team-card__name">Ernie Hu</p>
+				<p class="team-card__role">Treasurer</p>
+			</div>
+		</article>
+		<article class="team-card team-card--text">
+			<div class="team-card__aside">
+				<p class="team-card__name">Jonathan Pettibone</p>
+				<p class="team-card__role">Board Member At Large</p>
+			</div>
+		</article>
+		<article class="team-card">
+			<img class="team-card__photo" src="../build/static/images/board-lizzy-hu-display.jpg" alt="Lizzy Hu">
+			<div class="team-card__aside">
+				<p class="team-card__name">Lizzy Hu</p>
+				<p class="team-card__role">Youth Board Member At Large</p>
+				<button class="team-card__bio-btn" type="button" aria-expanded="false" aria-controls="bio-lizzy-hu">Read bio</button>
+			</div>
+			<div class="team-card__bio" id="bio-lizzy-hu" hidden>
+				<p>I have always loved swinging around monkey bars and climbing the walls of my house, but I first started indoor rock climbing at my tenth birthday party. Though initially hesitant, my passion quickly grew, and I joined a competitive climbing team. After jumping between sports my whole childhood, I was happy to find something I genuinely loved and was motivated to compete in.</p>
+				<p>My six years of competing has brought me up-and-down the East Coast and across the country, especially for USA Climbing Youth Nationals. Outside of formal venues, I go on outdoor climbing trips each summer, with trips to Rocklands, the Lofoten Islands, and Squamish, inspiring the many outdoor climbing goals I hope to pursue after my final year of youth competition ends.</p>
+				<p>My home gym, GP 81 Youth Training Center in Brooklyn, NY, holds a tight knit community which I can always rely on. I can't wait to be more involved in SYCO and help others experience the same support and sense of community that climbing has given me.</p>
+			</div>
+		</article>
+		<article class="team-card">
+			<img class="team-card__photo" src="../build/static/images/board-spenser-vinjamuri-display.jpg" alt="Spenser Vinjamuri">
+			<div class="team-card__aside">
+				<p class="team-card__name">Spenser Vinjamuri</p>
+				<p class="team-card__role">Youth Board Member At Large</p>
+			</div>
+		</article>
+
+		<section class="team-past">
+			<h2 class="team-past__title">Past Youth Board Members</h2>
+			<p class="team-past__name">Goldie Kraus <span class="team-past__years">2025–2026</span></p>
+			<p class="team-past__name">Evan Finegan <span class="team-past__years">2025–2026</span></p>
+		</section>
+	</main>
+
+	<footer class="page-footer">
+		<div class="page-footer__inner">
+			<span class="page-footer__copyright">&copy; Copyright 2026 SYCO | Ben Pingilley</span>
+		</div>
+	</footer>
+
+	<script>
+		function toggleMobileMenu() {
+			document.getElementById('mobile-nav').classList.toggle('mobile-open');
+		}
+
+		function toggleBio(button) {
+			var bio = document.getElementById(button.getAttribute('aria-controls'));
+			var open = button.getAttribute('aria-expanded') === 'true';
+			button.setAttribute('aria-expanded', String(!open));
+			bio.hidden = open;
+			button.textContent = open ? 'Read bio' : 'Hide bio';
+		}
+
+		document.addEventListener('DOMContentLoaded', function() {
+			var mobileNav = document.getElementById('mobile-nav');
+			var hamburger = document.querySelector('.hamburger');
+
+			document.querySelectorAll('#mobile-nav .page-header__nav-link').forEach(function(link) {
+				link.addEventListener('click', function() {
+					mobileNav.classList.remove('mobile-open');
+				});
+			});
+
+			document.addEventListener('click', function(event) {
+				if (!hamburger.contains(event.target)) {
+					mobileNav.classList.remove('mobile-open');
+				}
+			});
+
+			document.querySelectorAll('.team-card__bio-btn').forEach(function(button) {
+				button.addEventListener('click', function() {
+					toggleBio(button);
+				});
+			});
+		});
+	</script>
+</body>
+</html>
