@@ -157,6 +157,11 @@ li.portfolio__item div.portfolio__item-caption span {
 
 .page-header__logo {
 	margin: 0 !important;
+	color: #424242;
+}
+
+a.page-header__logo:hover {
+	color: #424242;
 }
 
 .page-header__nav {
@@ -580,5 +585,236 @@ li.portfolio__item div.portfolio__item-caption span {
 	font-size: 16px !important;
 	font-weight: normal !important;
 	color: #000000 !important;
+}
+
+.team-page {
+	max-width: 880px;
+	margin: 0 auto;
+	padding: 48px 24px 80px;
+}
+
+.team-card {
+	display: grid;
+	grid-template-columns: 240px 1fr;
+	grid-template-areas:
+		"photo aside"
+		"bio bio";
+	column-gap: 32px;
+	row-gap: 24px;
+	align-items: center;
+}
+
+.team-card + .team-card {
+	margin-top: 40px;
+	padding-top: 40px;
+	border-top: 1px solid #e6e6e6;
+}
+
+.team-card--text {
+	grid-template-areas: "aside aside";
+}
+
+.team-card--text .team-card__aside {
+	grid-column: 2;
+}
+
+.team-card--text .team-card__role {
+	margin-bottom: 0;
+}
+
+.team-card--text + .team-card--text {
+	margin-top: 0;
+	padding-top: 24px;
+	padding-bottom: 24px;
+}
+
+.team-card:not(.team-card--text) + .team-card--text {
+	padding-bottom: 24px;
+}
+
+.team-card__photo {
+	grid-area: photo;
+	width: 240px;
+	height: 360px;
+	object-fit: cover;
+	object-position: center center;
+	background-color: #f3f3f3;
+}
+
+.team-card__aside {
+	grid-area: aside;
+}
+
+.team-card__name {
+	margin-bottom: 6px;
+	font-size: 26px;
+	font-weight: 700;
+	line-height: 1.2;
+	color: #474747;
+}
+
+.team-card__role {
+	margin-bottom: 18px;
+	font-size: 16px;
+	font-weight: 400;
+	line-height: 1.3;
+	color: #474747;
+}
+
+.team-card__bio-btn {
+	padding: 12px 24px;
+	border: none;
+	background-color: #F48030;
+	font-family: "Lato", sans-serif;
+	font-size: 15px;
+	font-weight: 700;
+	letter-spacing: 0.04em;
+	text-transform: uppercase;
+	color: #fff;
+	cursor: pointer;
+}
+
+.team-card__bio-btn:hover {
+	background-color: #474747;
+}
+
+.team-card__bio {
+	grid-area: bio;
+	max-width: 68ch;
+	font-size: 16px;
+	line-height: 1.55;
+	color: #474747;
+}
+
+.team-card__bio p + p {
+	margin-top: 12px;
+}
+
+.team-past {
+	display: grid;
+	grid-template-columns: 240px 1fr;
+	column-gap: 32px;
+	margin-top: 56px;
+	padding-top: 40px;
+	border-top: 1px solid #e6e6e6;
+}
+
+.team-past__title,
+.team-past__name,
+.team-past__person {
+	grid-column: 2;
+}
+
+.team-past__person {
+	margin-bottom: 28px;
+}
+
+.team-past__person .team-past__name {
+	margin-bottom: 14px;
+}
+
+.team-past__person .team-card__bio {
+	margin-top: 16px;
+}
+
+.team-past__person--photo {
+	grid-column: 1 / -1;
+	display: grid;
+	grid-template-columns: 240px 1fr;
+	column-gap: 32px;
+	row-gap: 24px;
+	align-items: center;
+}
+
+.team-past__person--photo .team-card__photo {
+	grid-area: auto;
+	grid-column: 1;
+	grid-row: 1;
+}
+
+.team-past__person--photo .team-past__details {
+	grid-column: 2;
+	grid-row: 1;
+}
+
+.team-past__person--photo .team-card__bio {
+	grid-column: 1 / -1;
+	margin-top: 0;
+}
+
+.team-past__years {
+	margin-left: 12px;
+	font-size: 16px;
+	font-weight: 400;
+	line-height: 1.3;
+	color: #474747;
+}
+
+.team-past__title {
+	margin-bottom: 20px;
+	font-size: 22px;
+	font-weight: 700;
+	line-height: 1.3;
+	color: #F48030;
+}
+
+.team-past__name {
+	margin-bottom: 16px;
+	font-size: 26px;
+	font-weight: 700;
+	line-height: 1.2;
+	color: #474747;
+}
+
+@media (max-width: 640px) {
+	.team-page {
+		padding: 32px 20px 64px;
+	}
+
+	.team-card {
+		grid-template-columns: 1fr;
+		grid-template-areas:
+			"photo"
+			"aside"
+			"bio";
+		justify-items: center;
+		text-align: center;
+	}
+
+	.team-card__bio {
+		text-align: left;
+	}
+
+	.team-card--text .team-card__aside {
+		grid-column: 1;
+	}
+
+	.team-past {
+		grid-template-columns: 1fr;
+		text-align: center;
+	}
+
+	.team-past__title,
+	.team-past__name,
+	.team-past__person {
+		grid-column: 1;
+	}
+
+	.team-past__person--photo {
+		grid-template-columns: 1fr;
+		justify-items: center;
+		text-align: center;
+	}
+
+	.team-past__person--photo .team-card__photo,
+	.team-past__person--photo .team-past__details,
+	.team-past__person--photo .team-card__bio {
+		grid-column: 1;
+		grid-row: auto;
+	}
+
+	.team-past__person--photo .team-card__bio {
+		text-align: left;
+	}
 }
 
